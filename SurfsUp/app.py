@@ -61,12 +61,12 @@ def teardown_request(exception=None):
 def welcome():
     """List all available api routes."""
     return (
-        f"Available Routes:<br/>"
-        f"/api/v1.0/precipitation<br/>"
-        f"/api/v1.0/stations<br/>"
-        f"/api/v1.0/tobs<br/>"
-        f"/api/v1.0/DATE  Replace 'DATE' with your own date in the format year-month-day.  For example, /api/v1.0/2010-1-16.<br/>"
-        f"/api/v1.0/DATE/DATE  Replace each 'DATE' with your own start and end dates in the format year-month-day.  For example, /api/v1.0/2011-9-1/2012-8-7.<br/>"
+        f"Available Routes:<br/><br/>"
+        f"/api/v1.0/precipitation<br/>     Shows precipitation readings for the last 12 months recorded for all stations.<br/><br/>"
+        f"/api/v1.0/stations<br/>     Shows Station names and id numbers.<br/><br/>"  
+        f"/api/v1.0/tobs<br/>     Shows temperature readings for the last 12 months recorded for the station with the most observations - Waihee Station.<br/><br/>"
+        f"/api/v1.0/DATE<br/>     Shows the minimum temperature, maximum temperature, and average temperature at Waihee Station from selected date to 8/23/17. <br/> Replace 'DATE' with your own date in the format year-month-day.  For example, /api/v1.0/2010-1-16.<br/><br/>"
+        f"/api/v1.0/DATE/DATE<br/>     Shows the minimum temperature, maximum temperature, and average temperature at Waihee Station from first selected date through second selected date. <br/>Replace each 'DATE' with your own start and end dates in the format year-month-day.  For example, /api/v1.0/2011-9-1/2012-8-7."
     )
 
 #################################################
